@@ -80,15 +80,15 @@ export function useKeyboardNavigation({
         return
       }
 
-      // Shift+ArrowUp - Move task up
-      if (e.key === 'ArrowUp' && e.shiftKey && selectedTaskId) {
+      // Cmd+ArrowUp - Move task up
+      if (e.key === 'ArrowUp' && (e.metaKey || e.ctrlKey) && selectedTaskId) {
         e.preventDefault()
         onMoveTask(selectedTaskId, 'up')
         return
       }
 
-      // Shift+ArrowDown - Move task down
-      if (e.key === 'ArrowDown' && e.shiftKey && selectedTaskId) {
+      // Cmd+ArrowDown - Move task down
+      if (e.key === 'ArrowDown' && (e.metaKey || e.ctrlKey) && selectedTaskId) {
         e.preventDefault()
         onMoveTask(selectedTaskId, 'down')
         return
