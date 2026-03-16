@@ -9,7 +9,12 @@
       "Bash(npx shadcn@latest add dialog)",
       "Bash(npm run build:*)",
       "Bash(git init:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git config:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nInitial commit: Done task manager app with GitHub Pages deployment\n\n- React + TypeScript task manager with keyboard navigation\n- GitHub Actions workflow for automatic deployment\n- Vite configured for GitHub Pages subdirectory \\(/todoey/\\)\n- Fixed TypeScript errors for production build\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(npm run preview:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)"
     ]
   }
 }

@@ -80,6 +80,20 @@ export function useKeyboardNavigation({
         return
       }
 
+      // Shift+ArrowUp - Move task up
+      if (e.key === 'ArrowUp' && e.shiftKey && selectedTaskId) {
+        e.preventDefault()
+        onMoveTask(selectedTaskId, 'up')
+        return
+      }
+
+      // Shift+ArrowDown - Move task down
+      if (e.key === 'ArrowDown' && e.shiftKey && selectedTaskId) {
+        e.preventDefault()
+        onMoveTask(selectedTaskId, 'down')
+        return
+      }
+
       // Arrow Down - Navigate to next task
       if (e.key === 'ArrowDown') {
         e.preventDefault()
@@ -98,20 +112,6 @@ export function useKeyboardNavigation({
       if (e.key === 'Enter' && e.shiftKey && selectedTaskId) {
         e.preventDefault()
         onToggleTask(selectedTaskId)
-        return
-      }
-
-      // Cmd+ArrowUp - Move task up
-      if (e.key === 'ArrowUp' && (e.metaKey || e.ctrlKey) && selectedTaskId) {
-        e.preventDefault()
-        onMoveTask(selectedTaskId, 'up')
-        return
-      }
-
-      // Cmd+ArrowDown - Move task down
-      if (e.key === 'ArrowDown' && (e.metaKey || e.ctrlKey) && selectedTaskId) {
-        e.preventDefault()
-        onMoveTask(selectedTaskId, 'down')
         return
       }
     }
